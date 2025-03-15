@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "Bebas Kai";
+  src: url("/fonts/bebas-kai/BebasKai.woff2") format("woff2"), url("/fonts/bebas-kai/BebasKai.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", sans-serif;
+  --font-kai: "Bebas Kai", sans-serif;
+}
