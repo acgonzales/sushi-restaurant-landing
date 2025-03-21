@@ -19,11 +19,11 @@
     </div>
     <div class="relative flex flex-col h-full">
       <!-- Navbar -->
-      <nav x-data="navbar()" class="lg:px-[80px] text-white">
+      <nav x-data="navbar()" x-ref="navbar" class="lg:px-[80px] text-white">
         <div
           class="flex relative justify-center lg:justify-between items-center border-b-[1px] border-b-white/10 px-5 lg:py-[40px] py-4">
           <!-- Mobile Hamburger Menu -->
-          <svg @click="openMobileMenu" class="absolute left-5 lg:hidden" xmlns="http://www.w3.org/2000/svg" width="24"
+          <svg x-ref="mobileMenuTrigger" @click="openMobileMenu" class="absolute left-5 lg:hidden" xmlns="http://www.w3.org/2000/svg" width="24"
             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round" class="lucide lucide-menu">
             <line x1="4" x2="20" y1="12" y2="12" />
@@ -33,16 +33,17 @@
 
           <!-- Mobile Navigation Menu -->
           <div class="lg:hidden">
-            <div
+            <div x-ref="mobileMenu"
               class="fixed flex flex-col gap-2 inset-y-0 left-0 transform transition-transform duration-300 ease-in-out w-2/3 bg-black/95 z-50"
               :class="isOpen ? '-translate-x-0' : '-translate-x-full'">
               <div class="grow p-6 border-b-[1px] border-b-white/10">
                 <ul class="flex flex-col gap-6 uppercase font-medium tracking-[0.08em]">
-                  <li><a href="#" class="block py-2">About</a></li>
-                  <li><a href="#" class="block py-2">Menu</a></li>
-                  <li><a href="#" class="block py-2">Contact</a></li>
-                  <li><a href="#" class="block py-2">+23 344 434</a></li>
-                  <li><a href="#" class="block py-2 bg-sushi-red text-white text-center">Book a Table</a></li>
+                  <li><a href="#aboutSection" class="block py-2">About</a></li>
+                  <li><a href="#beveragesMenu" class="block py-2">Menu</a></li>
+                  <li><a href="#reservationForm" class="block py-2">Contact</a></li>
+                  <li><a href="#reservationForm" class="block py-2">+23 344 434</a></li>
+                  <li><a href="#reservationForm" class="block py-2 bg-sushi-red text-white text-center">Book a Table</a>
+                  </li>
                 </ul>
               </div>
               <div class="flex flex-row p-6 gap-4 justify-center">
@@ -62,13 +63,13 @@
           <!-- Desktop Left Nav Items -->
           <ul class="hidden lg:flex flex-wrap flex-row content-center gap-10 uppercase font-medium tracking-[0.08em]">
             <li>
-              <a href="#">About</a>
+              <a href="#aboutSection">About</a>
             </li>
             <li>
-              <a href="#">Menu</a>
+              <a href="#beveragesMenu">Menu</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#reservationForm">Contact</a>
             </li>
           </ul>
 
@@ -105,7 +106,7 @@
             <li>
               <a href="#">+23 344 434</a>
             </li>
-            <li><a href="#" class="py-4 px-6 bg-white/10 text-white">Book a Table</a></li>
+            <li><a href="#reservationForm" class="py-4 px-6 bg-white/10 text-white">Book a Table</a></li>
           </ul>
         </div>
       </nav>
@@ -136,7 +137,7 @@
             </p>
 
             <div class="flex flex-col md:flex-row gap-4 tracking-[0.08em] text-center">
-              <a href="#" class="py-4 px-6 bg-sushi-red text-white">Book a Table</a>
+              <a href="#reservationForm" class="py-4 px-6 bg-sushi-red text-white">Book a Table</a>
               <a href="#" class="py-4 px-6 text-white">View Menu</a>
             </div>
           </div>
@@ -195,21 +196,27 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div
           class="h-[230px] lg:h-[350px] xl:h-[616px] relative bg-gradient-to-b from-[#4F4F4F] to-[#2A2A2A] from-50%  flex flex-col justify-end">
-          <div class="absolute inset-4 border-1 border-white/20 flex flex-col justify-end p-4">
-            <h6 class="text-white text-2xl lg:text-4xl leading-[130%] tracking-[-0.02em]">Beverage</h6>
-          </div>
+          <a href="#beveragesMenu">
+            <div class="absolute inset-4 border-1 border-white/20 flex flex-col justify-end p-4">
+              <h6 class="text-white text-2xl lg:text-4xl leading-[130%] tracking-[-0.02em]">Beverage</h6>
+            </div>
+          </a>
         </div>
         <div
           class="h-[230px] lg:h-[350px] xl:h-[616px] relative bg-gradient-to-b from-[#4F4F4F] to-[#2A2A2A] from-50%  flex flex-col justify-end">
-          <div class="absolute inset-4 border-1 border-white/20 flex flex-col justify-end p-4">
-            <h6 class="text-white text-2xl lg:text-4xl leading-[130%] tracking-[-0.02em]">Food</h6>
-          </div>
+          <a href="#foodsMenu">
+            <div class="absolute inset-4 border-1 border-white/20 flex flex-col justify-end p-4">
+              <h6 class="text-white text-2xl lg:text-4xl leading-[130%] tracking-[-0.02em]">Food</h6>
+            </div>
+          </a>
         </div>
         <div
           class="h-[230px] lg:h-[350px] xl:h-[616px] relative bg-gradient-to-b from-[#4F4F4F] to-[#2A2A2A] from-50%  flex flex-col justify-end">
-          <div class="absolute inset-4 border-1 border-white/20 flex flex-col justify-end p-4">
-            <h6 class="text-white text-2xl lg:text-4xl leading-[130%] tracking-[-0.02em]">Desserts</h6>
-          </div>
+          <a href="#dessertsMenu">
+            <div class="absolute inset-4 border-1 border-white/20 flex flex-col justify-end p-4">
+              <h6 class="text-white text-2xl lg:text-4xl leading-[130%] tracking-[-0.02em]">Desserts</h6>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -397,14 +404,14 @@
           </div>
         </div>
       </div>
-      <a class="cursor-pointer uppercase py-2 px-6 text-white font-medium text-base tracking-[0.08em]">
+      <a href="#beveragesMenu" class="cursor-pointer uppercase py-2 px-6 text-white font-medium text-base tracking-[0.08em]">
         View Full Menu
       </a>
     </div>
   </section>
 
   <!-- About Omakase -->
-  <section class="p-8 md:p-16 lg:p-30 flex justify-center items-center relative overflow-hidden">
+  <section id="aboutSection" class="p-8 md:p-16 lg:p-30 flex justify-center items-center relative overflow-hidden">
     <div class="absolute h-px w-[calc(40vw)] md:w-[calc(55vw)] left-0 top-0 md:top-[120px] bg-white opacity-50"></div>
     <div class="absolute h-px w-[calc(30vw)] md:w-[calc(40vw)] right-0 bottom-0 md:bottom-[120px] bg-white opacity-50">
     </div>
@@ -463,7 +470,7 @@
 
       <div class="flex flex-col gap-20">
         <!-- Beverages -->
-        <div class="flex flex-col lg:flex-row items-center">
+        <div id="beveragesMenu" class="flex flex-col lg:flex-row items-center">
           <div class="bg-[#D9D9D9] w-2/3 h-[300px] lg:h-[500px] lg:w-[430px]"></div>
           <div class="w-screen lg:w-[770px] p-[72px] flex flex-col gap-4 bg-[#1A1A1A] relative">
             <div class="absolute inset-8 border-1 border-white opacity-20"></div>
@@ -582,7 +589,7 @@
         </div>
 
         <!-- Food -->
-        <div class="flex flex-col lg:flex-row items-center">
+        <div id="foodsMenu" class="flex flex-col lg:flex-row items-center">
           <div class="order-2 lg:order-1 w-screen lg:w-[770px] p-[72px] flex flex-col gap-4 bg-[#1A1A1A] relative">
             <div class="absolute inset-8 border-1 border-white opacity-20"></div>
 
@@ -683,7 +690,7 @@
         </div>
 
         <!-- Dessert -->
-        <div class="flex flex-col lg:flex-row items-center">
+        <div id="dessertsMenu" class="flex flex-col lg:flex-row items-center">
           <div class="bg-[#D9D9D9] w-2/3 h-[300px] lg:h-[500px] lg:w-[430px]"></div>
 
           <div class="w-screen lg:w-[770px] p-[72px] flex flex-col gap-4 bg-[#1A1A1A] relative">
@@ -1006,50 +1013,53 @@
             </div>
           </div>
         </div>
-        <div class="bg-black w-full p-20 flex flex-col gap-8 justify-end">
-          <h4 class="text-[35px] text-white tracking-[-0.02em] leading-[130%]">Reserve Now</h4>
+        <form x-data="reservationForm" @submit.prevent="submitForm" id="reservationForm">
+          <div class="bg-black w-full p-20 flex flex-col gap-8 justify-end">
+            <h4 class="text-[35px] text-white tracking-[-0.02em] leading-[130%]">Reserve Now</h4>
 
-          <div class="flex flex-col">
-            <div class="py-[30px] flex flex-col border-b-1 border-white/9">
-              <span class="text-white text-[19px] tracking-[-0.02em] leading-[130%]">
-                First Name
-              </span>
-              <input name="firstname" type="text" placeholder="Clark"
-                class="font-[300] text-[19px] tracking-[-0.02em] leading-[140%] opacity-30 text-white" />
+            <div class="flex flex-col">
+              <div class="py-[30px] flex flex-col border-b-1 border-white/9">
+                <span class="text-white text-[19px] tracking-[-0.02em] leading-[130%]">
+                  First Name <span class="pl-2 text-sushi-red/80" x-text="errors.firstName"></span>
+                </span>
+                <input name="firstname" type="text" placeholder="Clark" x-model="firstName"
+                  class="font-[300] text-[19px] tracking-[-0.02em] leading-[140%] opacity-30 text-white" />
+              </div>
+              <div class="py-[30px] flex flex-col border-b-1 border-white/9">
+                <span class="text-white text-[19px] tracking-[-0.02em] leading-[130%]">
+                  Last Name <span class="pl-2 text-sushi-red/80" x-text="errors.lastName"></span>
+                </span>
+                <input name="lastname" type="text" placeholder="Kent" x-model="lastName"
+                  class="font-[300] text-[19px] tracking-[-0.02em] leading-[140%] opacity-30 text-white" />
+              </div>
+              <div class="py-[30px] flex flex-col border-b-1 border-white/9">
+                <span class="text-white text-[19px] tracking-[-0.02em] leading-[130%]">
+                  Date and Time <span class="pl-2 text-sushi-red/80" x-text="errors.date"></span>
+                </span>
+                <input name="date" type="datetime-local" x-model="date"
+                  class="font-[300] text-[19px] tracking-[-0.02em] leading-[140%] opacity-30 text-white" />
+              </div>
+              <div class="py-[30px] flex flex-col border-b-1 border-white/9">
+                <span class="text-white text-[19px] tracking-[-0.02em] leading-[130%]">
+                  Notes <span class="pl-2 text-sushi-red/80" x-text="errors.notes"></span>
+                </span>
+                <textarea name="notes" x-model="notes"
+                  class="resize-none font-[300] text-[19px] tracking-[-0.02em] leading-[140%] opacity-30 text-white"></textarea>
+              </div>
             </div>
-            <div class="py-[30px] flex flex-col border-b-1 border-white/9">
-              <span class="text-white text-[19px] tracking-[-0.02em] leading-[130%]">
-                Last Name
-              </span>
-              <input name="lastname" type="text" placeholder="Kent"
-                class="font-[300] text-[19px] tracking-[-0.02em] leading-[140%] opacity-30 text-white" />
-            </div>
-            <div class="py-[30px] flex flex-col border-b-1 border-white/9">
-              <span class="text-white text-[19px] tracking-[-0.02em] leading-[130%]">
-                Date and Time
-              </span>
-              <input name="date" type="datetime-local"
-                class="font-[300] text-[19px] tracking-[-0.02em] leading-[140%] opacity-30 text-white" />
-            </div>
-            <div class="py-[30px] flex flex-col border-b-1 border-white/9">
-              <span class="text-white text-[19px] tracking-[-0.02em] leading-[130%]">
-                Notes
-              </span>
-              <textarea name="notes"
-                class="resize-none font-[300] text-[19px] tracking-[-0.02em] leading-[140%] opacity-30 text-white"></textarea>
-            </div>
+
+            <button type="submit"
+              class="h-[52px] w-[100px] self-end cursor-pointer bg-white text-black uppercase py-2 px-6 font-medium text-center tracking-[0.08em]">
+              Next
+            </button>
           </div>
-
-          <button type="button"
-            class="h-[52px] w-[100px] self-end cursor-pointer bg-white text-black uppercase py-2 px-6 font-medium text-center tracking-[0.08em]">
-            Next
-          </button>
-        </div>
+        </form>
       </div>
     </div>
   </section>
 
-  <footer class="h-auto lg:h-[220px] bg-[#1A1A1A] py-10 lg:py-0 px-20 flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-0">
+  <footer
+    class="h-auto lg:h-[220px] bg-[#1A1A1A] py-10 lg:py-0 px-20 flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-0">
     <div class="flex flex-row gap-5">
       <svg class="w-[95px] h-[62px]" viewBox="0 0 71 46" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -1081,36 +1091,36 @@
       <ul
         class="hidden lg:flex flex-wrap flex-row content-center gap-10 uppercase font-medium tracking-[0.08em] text-center text-white">
         <li>
-          <a href="#">About</a>
+          <a href="#aboutSection">About</a>
         </li>
         <li>
-          <a href="#">Menu</a>
+          <a href="#beveragesMenu">Menu</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#reservationForm">Contact</a>
         </li>
       </ul>
     </div>
 
     <ul
-        class="lg:hidden flex flex-wrap flex-row content-center gap-10 uppercase font-medium tracking-[0.08em] text-center text-white">
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Menu</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
+      class="lg:hidden flex flex-row gap-10 uppercase font-medium tracking-[0.08em] text-center text-white">
+      <li>
+        <a href="#aboutSection">About</a>
+      </li>
+      <li>
+        <a href="#beveragesMenu">Menu</a>
+      </li>
+      <li>
+        <a href="#reservationForm">Contact</a>
+      </li>
     </ul>
 
     <ul
-      class="flex flex-wrap content-center flex-row gap-8 uppercase font-medium tracking-[0.08em] text-white text-center">
+      class="flex justify-center flex-wrap flex-row gap-8 uppercase font-medium tracking-[0.08em] text-white text-center">
       <li>
         <a href="#">+23 344 434</a>
       </li>
-      <li><a href="#" class="py-4 px-6 bg-white/10 text-white">Book a Table</a></li>
+      <li><a href="#reservationForm" class="py-4 px-6 bg-white/10 text-white">Book a Table</a></li>
     </ul>
   </footer>
 
