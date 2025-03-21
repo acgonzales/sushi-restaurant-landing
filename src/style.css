@@ -21,6 +21,10 @@
   background: linear-gradient(180deg, #D9D9D9 0%, #A5A5A5 28.76%, rgba(115, 115, 115, 0.8) 65.71%, #737373 77.66%, rgba(115, 115, 115, 0) 100%);
 }
 
+.menu-list-gradient {
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #A5A5A5 28.76%, #737373 65.71%, #737373 77.66%, rgba(115, 115, 115, 0) 100%);
+}
+
 .mix-blend-color-burn {
   mix-blend-mode: color-burn;
 }

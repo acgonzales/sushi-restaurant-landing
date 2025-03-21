@@ -399,12 +399,25 @@
 
   <!-- About Omakase -->
   <section class="p-30 flex justify-center items-center relative">
+    <div class="absolute h-px w-[calc(55vw)] left-0 top-[120px] bg-white opacity-50"></div>
+    <div class="absolute h-px w-[calc(40vw)] right-0 bottom-[120px] bg-white opacity-50"></div>
+
     <div class="absolute inset-0 -z-10 bg-black opacity-60">
       <div class="absolute inset-0 hero-gradient opacity-20"></div>
     </div>
 
     <div class="grid grid-cols-2 w-[1200px] h-[636px]">
-      <div class="bg-[#D9D9D9]"></div>
+      <div class="bg-[#D9D9D9] relative">
+        <div class="absolute right-0 top-[21px]">
+          <svg width="222" height="264" viewBox="0 0 222 264" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g style="mix-blend-mode:color-burn" opacity="0.8">
+              <path
+                d="M11.029 11.1151H123.315V25.3804H11.029V11.1151ZM16.9611 33.0074H118.23V46.7077H16.9611V33.0074ZM3.26083 54.7584H131.366V69.3061H3.26083V54.7584ZM5.94439 79.6166H129.106V94.3056H5.94439V79.6166ZM90.2648 67.6112H107.637V115.068C107.637 123.26 106.084 127.78 100.434 130.463C94.6432 133.005 86.875 133.288 76.5645 133.288C75.8583 128.486 73.1747 121.424 70.9149 116.763C77.6944 117.045 85.3214 117.045 87.44 117.045C89.6998 117.045 90.2648 116.48 90.2648 114.644V67.6112ZM56.6496 0.804624L75.1521 2.64074C68.0901 63.0915 52.8361 105.04 15.4075 129.192C12.5827 125.802 4.53199 118.881 0.153543 115.774C37.1585 95.2943 50.8588 56.5945 56.6496 0.804624ZM39.842 107.158L53.5423 98.6841C59.4744 104.475 66.9601 112.808 70.4911 118.458L55.9434 128.062C52.8361 122.412 45.6329 113.514 39.842 107.158ZM135.038 9.56151H240.121V25.6629H135.038V9.56151ZM136.309 35.8322H219.923V50.5212H136.309V35.8322ZM234.188 9.56151H251.561V112.243C251.561 121.989 249.866 127.215 243.793 130.181C237.861 133.005 228.963 133.429 216.11 133.429C215.545 128.344 213.002 119.87 210.601 115.068C218.652 115.492 227.833 115.492 230.657 115.35C233.2 115.35 234.188 114.644 234.188 111.961V9.56151ZM143.654 60.9729H160.179V119.305H143.654V60.9729ZM158.343 60.9729H212.579V108.995H158.343V94.4468H195.912V75.6619H158.343V60.9729ZM312.577 6.31299C312.012 8.99655 311.447 15.0699 311.306 18.6009C310.599 29.7589 310.176 45.0128 310.176 58.1481C310.176 73.5433 311.023 97.9779 311.023 106.17C311.023 123.542 304.809 128.344 295.487 128.344C281.786 128.344 262.295 116.48 262.295 101.509C262.295 87.8086 279.95 73.4021 299.583 66.4813C312.153 61.9616 326.418 59.7018 337.153 59.7018C358.904 59.7018 376.135 71.001 376.135 90.4921C376.135 107.3 367.378 119.87 344.921 125.378C338.424 126.791 332.068 127.215 326.277 127.78L319.921 109.418C326.136 109.418 332.35 109.418 337.153 108.43C348.593 106.452 357.774 100.661 357.774 90.4921C357.774 80.7466 349.299 75.2382 337.011 75.2382C325.006 75.2382 312.577 77.7805 301.56 82.159C288.848 86.9611 279.809 94.5881 279.809 100.661C279.809 105.181 286.447 108.995 290.12 108.995C292.662 108.995 294.498 107.865 294.498 102.921C294.498 95.5768 293.792 75.9444 293.792 58.8543C293.792 42.7529 293.933 25.2392 293.933 18.7421C293.933 15.9173 293.509 8.85531 293.086 6.31299H312.577ZM352.83 21.7082C363.564 26.9341 379.948 36.1147 387.575 41.4818L378.96 55.8883C372.18 50.2387 353.819 39.6457 345.062 35.4085L352.83 21.7082ZM266.109 29.4764C274.442 30.4651 280.515 30.4651 285.6 30.4651C300.289 30.4651 322.322 27.7815 336.87 23.5443L337.294 41.0581C321.334 44.7303 298.594 47.2726 286.165 47.2726C276.843 47.2726 271.335 47.1314 266.532 46.5664L266.109 29.4764ZM81.0842 140.878C80.6604 143.703 80.2367 147.234 80.0955 150.906C79.813 158.109 79.6718 178.165 79.6718 190.03C79.6718 205.566 81.9316 231.13 81.9316 242.288C81.9316 254.435 72.751 263.757 54.2485 263.757C31.6501 263.757 19.7859 255.141 19.7859 240.17C19.7859 225.905 32.9213 215.876 54.531 215.876C85.6038 215.876 108.767 231.13 120.49 241.017L110.321 256.836C96.9031 244.125 76.4232 230.424 52.2712 230.424C42.3844 230.424 36.876 234.238 36.876 239.181C36.876 244.548 41.8194 247.797 51.565 247.797C59.0507 247.797 64.1353 245.678 64.1353 237.486C64.1353 229.012 62.5817 203.73 62.5817 190.03C62.5817 176.47 62.7229 158.533 62.7229 150.482C62.7229 147.94 62.4405 143.562 61.8755 140.878H81.0842ZM22.4695 154.013C32.4975 155.708 48.7402 157.121 57.3558 157.121C76.5645 157.121 95.0669 156.132 115.688 152.883L115.547 168.985C101.14 170.962 78.6831 172.657 57.497 172.657C48.4577 172.657 32.0738 171.386 22.752 170.256L22.4695 154.013ZM21.622 184.521C30.9439 186.216 48.1752 187.205 55.6609 187.205C81.7904 187.205 100.01 185.51 117.383 183.25L117.242 199.916C97.7505 202.176 82.3553 203.024 55.5197 203.024C47.1865 203.024 31.2264 202.317 21.9045 201.187L21.622 184.521ZM188.992 143.562C188.144 147.234 187.297 151.753 186.449 155.284C185.178 161.64 183.342 170.397 181.93 177.6C177.269 197.515 165.828 237.769 151.139 261.638L132.637 254.294C149.444 231.695 160.037 194.408 163.992 176.612C166.676 163.9 168.229 151.895 168.088 141.302L188.992 143.562ZM237.719 156.697C246.335 168.985 258.199 195.82 262.578 209.379L244.64 217.713C240.968 201.894 230.94 176.47 220.771 163.9L237.719 156.697ZM131.789 172.516C136.874 172.798 141.676 172.657 146.902 172.516C158.201 172.233 184.896 169.126 195.489 169.126C210.319 169.126 220.912 175.764 220.912 196.244C220.912 212.91 218.935 235.791 213.002 247.938C208.2 257.825 200.432 260.932 189.839 260.932C184.331 260.932 177.692 260.085 172.749 258.955L169.783 240.311C175.291 241.865 183.342 243.277 187.014 243.277C191.816 243.277 195.347 241.865 197.607 237.204C201.562 229.294 203.398 212.063 203.398 198.221C203.398 186.922 198.455 185.227 189.698 185.227C181.223 185.227 156.93 188.335 149.162 189.323C145.066 189.888 137.721 190.877 133.484 191.583L131.789 172.516ZM359.045 144.268C358.621 146.528 358.339 152.742 358.197 156.414C357.915 166.019 357.915 174.069 357.632 181.273C357.35 193.843 356.926 209.097 355.514 216.3C353.96 223.786 350.288 225.622 343.085 225.622C338.141 225.622 326.701 224.351 321.899 223.503L322.181 207.967C326.56 208.956 332.492 209.662 335.316 209.662C338 209.662 339.271 209.238 339.695 206.413C340.401 201.046 340.684 190.877 340.966 181.131C340.966 173.787 340.966 165.595 340.966 157.262C340.966 153.59 340.401 146.951 339.977 144.268H359.045ZM303.396 148.505C302.831 153.166 302.549 157.121 302.549 163.194C302.549 176.047 301.984 213.334 302.266 224.916C302.69 238.899 303.82 242.006 325.006 242.006C338.847 242.006 356.785 240.311 367.237 238.334L366.531 257.684C357.067 258.672 339.836 259.943 326.277 259.943C289.837 259.943 285.317 252.175 284.752 227.741C284.47 215.594 284.611 172.657 284.611 164.183C284.611 158.25 284.188 153.448 283.481 148.505H303.396ZM256.222 180.425C260.177 180.425 266.674 180.143 273.877 179.295C288.142 178.024 341.249 172.798 368.508 171.103C372.321 170.821 377.83 170.397 382.067 170.115V187.346C379.525 187.205 372.039 187.487 368.367 187.487C346.333 188.193 291.391 194.125 275.007 195.962C270.628 196.527 261.872 197.798 258.058 198.363L256.222 180.425Z"
+                fill="#DD2B2B" />
+            </g>
+          </svg>
+        </div>
+      </div>
       <div class="flex flex-col p-20 gap-16">
         <div class="flex flex-col gap-4 uppercase">
           <span class="text-[18px] tracking-[0.04em] text-sushi-red">About the Omakase</span>
@@ -413,10 +426,328 @@
           </h4>
         </div>
         <p class="text-white opacity-70 text-[17px] leading-[130%] tracking-[-0.02em]">
-          Welcome to Omakase, where the delicate artistry of sushi meets the vibrant flavors of Japan. At Omakase, we are passionate about delivering an authentic and unforgettable dining experience, bringing the essence of traditional Japanese cuisine to every plate.
-          <br/><br/>
-          Our master chefs meticulously craft each piece of sushi using the freshest, highest-quality ingredients sourced locally and globally. From the rich, buttery taste of our sashimi to the perfectly balanced rolls, every bite at Omakase is a testament to our commitment to excellence and authenticity.
+          Welcome to Omakase, where the delicate artistry of sushi meets the vibrant flavors of Japan. At Omakase, we
+          are passionate about delivering an authentic and unforgettable dining experience, bringing the essence of
+          traditional Japanese cuisine to every plate.
+          <br /><br />
+          Our master chefs meticulously craft each piece of sushi using the freshest, highest-quality ingredients
+          sourced locally and globally. From the rich, buttery taste of our sashimi to the perfectly balanced rolls,
+          every bite at Omakase is a testament to our commitment to excellence and authenticity.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- List of Our Menu -->
+  <section class="p-30 flex justify-center items-center relative">
+    <div class="absolute h-px w-1/2 -left-28 top-24 bg-white opacity-50"></div>
+    <div class="absolute h-px w-1/2 -right-28 top-[305px] bg-white opacity-50"></div>
+
+    <div class="absolute -z-10 top-[330px] left-0 right-0 h-[913px] w-full menu-list-gradient opacity-60">
+    </div>
+
+    <div class="flex flex-col gap-30">
+      <div class="flex flex-col justify-center items-center py-8 gap-4 uppercase text-center">
+        <span class="text-[18px] tracking-[0.04em] text-sushi-red">List of</span>
+        <h4 class="text-white text-7xl font-kai tracking-[-0.04em] leading-[88%]">
+          Our <span class="text-white/60">Menu</span>
+        </h4>
+      </div>
+
+      <div class="flex flex-col gap-20">
+        <!-- Beverages -->
+        <div class="flex flex-row items-center">
+          <div class="bg-[#D9D9D9] h-[500px] w-[430px]"></div>
+
+          <div class="w-[770px] p-[72px] flex flex-col gap-4 bg-[#1A1A1A] relative">
+            <div class="absolute inset-8 border-1 border-white opacity-20"></div>
+
+            <h2 class="font-kai text-white text-5xl uppercase leading-[88%] tracking-[-0.02em]">
+              Beverage
+            </h2>
+            <div class="grid grid-cols-2 gap-10">
+              <div class="flex flex-col">
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Plum Wine (梅酒)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Smooth and refined, often enjoyed neat or on the rocks.</p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$19.75</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Sparkling Wine</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Sweet, fruity wine made from plums, served chilled.</p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$26.05</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Japanese Whiskey</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Japanese rice wine, with varieties like Junmai, Ginjo, and Daiginjo.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$34.90</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Green Tea (緑茶)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Traditional Japanese beverage, often served warm or cold.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$38.50</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Shochu (焼酎)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Finely ground green tea powder, served as a concentrated beverage.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$21.30</span>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Beer (ビール)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Non-alcoholic option with a spicy kick that complements sushi flavors.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$30.80</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">White Wine</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Champagne or Prosecco, providing a refreshing contrast.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$26.05</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Matcha (抹茶)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Distilled Japanese spirit, often served on the rocks or diluted with water.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$16.50</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Ginger Ale</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Light, crisp beers like Japanese lagers (e.g., Asahi, Sapporo, Kirin).
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$18.60</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food -->
+        <div class="flex flex-row items-center">
+          <div class="w-[770px] p-[72px] flex flex-col gap-4 bg-[#1A1A1A] relative">
+            <div class="absolute inset-8 border-1 border-white opacity-20"></div>
+
+            <h2 class="font-kai text-white text-5xl uppercase leading-[88%] tracking-[-0.02em]">
+              Food
+            </h2>
+            <div class="grid grid-cols-2 gap-10">
+              <div class="flex flex-col">
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Aburi Sushi (炙り寿司)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      A bowl of vinegared rice topped with various sashimi and ingredients.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$34.90</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Chirashi (ちらし寿司)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Lightly seared sushi with the top layer of fish torched.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$24.75</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Narezushi (馴れ寿司)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Thinly sliced raw fish or seafood, served without rice.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$19.75</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Oshi Sushi (押し寿司)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Sushi wrapped with seaweed, often filled with roe or sea urchin.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$15.40</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Temaki (手巻き寿司)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Inside-out rolls with rice on the outside and seaweed inside.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$11.50</span>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Nigiri (握り寿司)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Pressed sushi in a mold with fish and rice, cut into pieces.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$22.70</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Maki (巻き寿司)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Hand-rolled sushi in a cone shape with seaweed, rice, and fillings.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$12.85</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#D9D9D9] h-[500px] w-[430px]"></div>
+        </div>
+
+        <!-- Dessert -->
+        <div class="flex flex-row items-center">
+          <div class="bg-[#D9D9D9] h-[500px] w-[430px]"></div>
+
+          <div class="w-[770px] p-[72px] flex flex-col gap-4 bg-[#1A1A1A] relative">
+            <div class="absolute inset-8 border-1 border-white opacity-20"></div>
+
+            <h2 class="font-kai text-white text-5xl uppercase leading-[88%] tracking-[-0.02em]">
+              Dessert
+            </h2>
+            <div class="grid grid-cols-2 gap-10">
+              <div class="flex flex-col">
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Anmitsu (あんみつ)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Layered pastry with matcha-flavored cream.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$14.90</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Sesame Balls (ごま団子)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Rich and creamy ice cream flavored with green tea powder.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$39.60</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Dorayaki (どら焼き)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Fresh seasonal fruits like melon, strawberries, or persimmons, often served in elegant presentations.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$10.60</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Matcha Ice Cream (抹茶アイスクリーム)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Creamy cheesecake flavored with green tea, blending traditional Japanese and Western flavors.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$36.15</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Mille-Feuille Matcha Cake</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Traditional Japanese dessert with agar jelly, fruits, and red bean paste, often served with sweet syrup.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$32.20</span>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Fruit Platter</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Firm jelly made from red bean paste, agar, and sugar, often served in slices.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$27.40</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Taiyaki (鯛焼き)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Fish-shaped pastries filled with sweet fillings such as red bean paste, custard, or chocolate.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$13.25</span>
+                </div>
+                <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
+                  <div class="flex flex-col">
+                    <h3 class="text-white text-[19px] leading-[130%] tracking-[-0.02em]">Yokan (羊羹)</h3>
+                    <p
+                      class="text-[#F5F5F5] opacity-50 text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
+                      Fried or baked rice balls coated in sesame seeds and filled with sweet paste.
+                    </p>
+                  </div>
+                  <span class="text-[#F5F5F5] opacity-50 text-[17px] leading-[130%] tracking-[-0.02em]">$18.60</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
