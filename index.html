@@ -8,6 +8,8 @@
   <title>🍣 Sushi - Japanese Restaurant</title>
 </head>
 
+<!-- TODO: Fix decoratize lines on mobile -->
+
 <body class="bg-black overflow-x-hidden">
   <!-- Hero -->
   <section class="h-[913px] overflow-hidden">
@@ -31,8 +33,9 @@
 
           <!-- Mobile Navigation Menu -->
           <div class="lg:hidden">
-            <div class="fixed flex flex-col gap-2 inset-y-0 left-0 transform transition-transform duration-300 ease-in-out w-2/3 bg-black/95 z-50"
-                 :class="isOpen ? '-translate-x-0' : '-translate-x-full'">
+            <div
+              class="fixed flex flex-col gap-2 inset-y-0 left-0 transform transition-transform duration-300 ease-in-out w-2/3 bg-black/95 z-50"
+              :class="isOpen ? '-translate-x-0' : '-translate-x-full'">
               <div class="grow p-6 border-b-[1px] border-b-white/10">
                 <ul class="flex flex-col gap-6 uppercase font-medium tracking-[0.08em]">
                   <li><a href="#" class="block py-2">About</a></li>
@@ -180,8 +183,8 @@
 
   <!-- Our Menu Header -->
   <section class="p-16 md:p-[120px] flex justify-center items-center relative">
-    <div class="absolute h-px w-1/2 -left-28 top-12 md:top-24 bg-white opacity-50"></div>
-    <div class="absolute h-px w-1/2 -right-28 top-[250px] md:top-[305px] bg-white opacity-50"></div>
+    <div class="hidden lg:block absolute h-px w-1/2 -left-28 top-12 md:top-24 bg-white opacity-50"></div>
+    <div class="hidden lg:block absolute h-px w-1/2 -right-28 top-[250px] md:top-[305px] bg-white opacity-50"></div>
 
     <div class="w-[1200px] flex flex-col gap-16">
       <div class="flex flex-col justify-center items-center text-center uppercase gap-4 p-4 md:p-8">
@@ -215,8 +218,8 @@
   <!-- Our Menu -->
   <section class="px-10 md:px-[60px] py-[120px] flex justify-center items-center">
     <div class="bg-[#1A1A1A] w-[1320px] py-20 px-5 md:px-10 lg:px-20 gap-16 flex flex-col items-center relative">
-      <div class="absolute h-px w-1/2 left-0 top-[56px] bg-white opacity-50"></div>
-      <div class="absolute h-px w-1/2 right-0 top-[240px] md:top-[265px] bg-white opacity-50"></div>
+      <div class="hidden lg:block absolute h-px w-1/2 left-0 top-[56px] bg-white opacity-50"></div>
+      <div class="hidden lg:block absolute h-px w-1/2 right-0 top-[240px] md:top-[265px] bg-white opacity-50"></div>
 
       <div class="flex flex-col justify-center items-center text-center py-8 g-4 uppercase">
         <h5 class="text-sushi-red text-sm sm:text-lg tracking-[-0.04em]">Our Menu</h5>
@@ -403,7 +406,8 @@
   <!-- About Omakase -->
   <section class="p-8 md:p-16 lg:p-30 flex justify-center items-center relative overflow-hidden">
     <div class="absolute h-px w-[calc(40vw)] md:w-[calc(55vw)] left-0 top-0 md:top-[120px] bg-white opacity-50"></div>
-    <div class="absolute h-px w-[calc(30vw)] md:w-[calc(40vw)] right-0 bottom-0 md:bottom-[120px] bg-white opacity-50"></div>
+    <div class="absolute h-px w-[calc(30vw)] md:w-[calc(40vw)] right-0 bottom-0 md:bottom-[120px] bg-white opacity-50">
+    </div>
 
     <div class="absolute inset-0 -z-10 bg-black opacity-60">
       <div class="absolute inset-0 hero-gradient opacity-20"></div>
@@ -443,8 +447,8 @@
 
   <!-- List of Our Menu -->
   <section class="p-30 flex justify-center items-center relative">
-    <div class="absolute h-px w-1/2 -left-28 top-24 bg-white opacity-50"></div>
-    <div class="absolute h-px w-1/2 -right-28 top-[305px] bg-white opacity-50"></div>
+    <div class="hidden lg:block absolute h-px w-1/2 -left-28 top-24 bg-white opacity-50"></div>
+    <div class="hidden lg:block absolute h-px w-1/2 -right-28 top-[305px] bg-white opacity-50"></div>
 
     <div class="absolute -z-10 top-[330px] left-0 right-0 h-[913px] w-full menu-list-gradient opacity-60">
     </div>
@@ -471,41 +475,49 @@
               <div class="flex flex-col">
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Plum Wine (梅酒)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Plum Wine (梅酒)
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Smooth and refined, often enjoyed neat or on the rocks.</p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$19.75</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$19.75</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Sparkling Wine</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Sparkling Wine
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Sweet, fruity wine made from plums, served chilled.</p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$26.05</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$26.05</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Japanese Whiskey</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Japanese Whiskey
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Japanese rice wine, with varieties like Junmai, Ginjo, and Daiginjo.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$34.90</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$34.90</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Green Tea (緑茶)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Green Tea (緑茶)
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Traditional Japanese beverage, often served warm or cold.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$38.50</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$38.50</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
@@ -515,7 +527,8 @@
                       Finely ground green tea powder, served as a concentrated beverage.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$21.30</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$21.30</span>
                 </div>
               </div>
               <div class="flex flex-col">
@@ -527,7 +540,8 @@
                       Non-alcoholic option with a spicy kick that complements sushi flavors.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$30.80</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$30.80</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
@@ -537,7 +551,8 @@
                       Champagne or Prosecco, providing a refreshing contrast.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$26.05</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$26.05</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
@@ -547,7 +562,8 @@
                       Distilled Japanese spirit, often served on the rocks or diluted with water.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$16.50</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$16.50</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
@@ -557,7 +573,8 @@
                       Light, crisp beers like Japanese lagers (e.g., Asahi, Sapporo, Kirin).
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$18.60</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$18.60</span>
                 </div>
               </div>
             </div>
@@ -569,72 +586,84 @@
           <div class="order-2 lg:order-1 w-screen lg:w-[770px] p-[72px] flex flex-col gap-4 bg-[#1A1A1A] relative">
             <div class="absolute inset-8 border-1 border-white opacity-20"></div>
 
-            <h2 class="font-kai text-white text-5xl uppercase leading-[88%] tracking-[-0.02em]">
+            <h2 class="font-kai text-white text-4xl mg:text-5xl uppercase leading-[88%] tracking-[-0.02em]">
               Food
             </h2>
             <div class="grid gap-4 lg:grid-cols-2 lg:gap-10">
               <div class="flex flex-col">
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Aburi Sushi (炙り寿司)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Aburi Sushi
+                      (炙り寿司)</h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       A bowl of vinegared rice topped with various sashimi and ingredients.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$34.90</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$34.90</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Chirashi (ちらし寿司)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Chirashi (ちらし寿司)
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Lightly seared sushi with the top layer of fish torched.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$24.75</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$24.75</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Narezushi (馴れ寿司)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Narezushi (馴れ寿司)
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Thinly sliced raw fish or seafood, served without rice.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$19.75</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$19.75</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Oshi Sushi (押し寿司)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Oshi Sushi (押し寿司)
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Sushi wrapped with seaweed, often filled with roe or sea urchin.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$15.40</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$15.40</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Temaki (手巻き寿司)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Temaki (手巻き寿司)
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Inside-out rolls with rice on the outside and seaweed inside.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$11.50</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$11.50</span>
                 </div>
               </div>
               <div class="flex flex-col">
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Nigiri (握り寿司)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Nigiri (握り寿司)
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Pressed sushi in a mold with fish and rice, cut into pieces.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$22.70</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$22.70</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
@@ -644,7 +673,8 @@
                       Hand-rolled sushi in a cone shape with seaweed, rice, and fillings.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$12.85</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$12.85</span>
                 </div>
               </div>
             </div>
@@ -659,85 +689,99 @@
           <div class="w-screen lg:w-[770px] p-[72px] flex flex-col gap-4 bg-[#1A1A1A] relative">
             <div class="absolute inset-8 border-1 border-white opacity-20"></div>
 
-            <h2 class="font-kai text-white text-5xl uppercase leading-[88%] tracking-[-0.02em]">
+            <h2 class="font-kai text-white text-4xl mg:text-5xl uppercase leading-[88%] tracking-[-0.02em]">
               Dessert
             </h2>
             <div class="grid gap-4 lg:grid-cols-2 lg:gap-10">
               <div class="flex flex-col">
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Anmitsu (あんみつ)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Anmitsu (あんみつ)
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Layered pastry with matcha-flavored cream.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$14.90</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$14.90</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Sesame Balls (ごま団子)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Sesame Balls
+                      (ごま団子)</h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Rich and creamy ice cream flavored with green tea powder.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$39.60</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$39.60</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Dorayaki (どら焼き)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Dorayaki (どら焼き)
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Fresh seasonal fruits like melon, strawberries, or persimmons, often served in elegant
                       presentations.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$10.60</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$10.60</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Matcha Ice Cream (抹茶アイスクリーム)
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Matcha Ice Cream
+                      (抹茶アイスクリーム)
                     </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Creamy cheesecake flavored with green tea, blending traditional Japanese and Western flavors.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$36.15</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$36.15</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Mille-Feuille Matcha Cake</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Mille-Feuille
+                      Matcha Cake</h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Traditional Japanese dessert with agar jelly, fruits, and red bean paste, often served with sweet
                       syrup.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$32.20</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$32.20</span>
                 </div>
               </div>
               <div class="flex flex-col">
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Fruit Platter</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Fruit Platter
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Firm jelly made from red bean paste, agar, and sugar, often served in slices.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$27.40</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$27.40</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
-                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Taiyaki (鯛焼き)</h3>
+                    <h3 class="text-white text-base md:text-[19px] leading-[130%] tracking-[-0.02em]]">Taiyaki (鯛焼き)
+                    </h3>
                     <p
                       class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] text-ellipsis line-clamp-2 leading-[130%] tracking-[-0.02em]">
                       Fish-shaped pastries filled with sweet fillings such as red bean paste, custard, or chocolate.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$13.25</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$13.25</span>
                 </div>
                 <div class="flex justify-between items-start border-b-1 border-b-white/15 py-6 gap-10">
                   <div class="flex flex-col">
@@ -747,7 +791,8 @@
                       Fried or baked rice balls coated in sesame seeds and filled with sweet paste.
                     </p>
                   </div>
-                  <span class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$18.60</span>
+                  <span
+                    class="text-[#F5F5F5] opacity-50 text-sm md:text-[17px] leading-[130%] tracking-[-0.02em]">$18.60</span>
                 </div>
               </div>
             </div>
@@ -758,20 +803,20 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="p-8 md:p-16 lg:p-30 flex justify-center items-center relative overflow-hidden">
-    <div class="absolute h-px w-1/2 -left-28 top-24 bg-white opacity-50"></div>
-    <div class="absolute h-px w-1/2 -right-28 top-[305px] bg-white opacity-50"></div>
+  <section class="p-8 md:p-16 lg:p-30 flex justify-center items-center relative">
+    <div class="hidden lg:block absolute h-px w-1/2 -left-28 top-0 lg:top-24 bg-white opacity-50"></div>
+    <div class="hidden lg:block absolute h-px w-1/2 -right-28 top-[230px] lg:top-[305px] bg-white opacity-50"></div>
 
     <div class="flex flex-col gap-16">
       <div class="flex flex-col justify-center items-center py-8 gap-4 uppercase text-center">
-        <span class="text-[18px] tracking-[0.04em] text-sushi-red">Reviews</span>
-        <h4 class="text-white text-7xl font-kai tracking-[-0.04em] leading-[88%]">
+        <span class="text-base md:text-[18px] tracking-[0.04em] text-sushi-red">Reviews</span>
+        <h4 class="text-white text-5xl md:text-6xl lg:text-7xl font-kai tracking-[-0.04em] leading-[88%]">
           Our Customers <span class="text-white/60">Love Us</span>
         </h4>
       </div>
 
-      <div class="flex flex-row gap-8 justify-center">
-        <div class="opacity-60 w-[632px] p-20 gap-8 bg-[#1A1A1A] flex flex-col relative">
+      <div class="flex flex:col lg:flex-row gap-8 justify-center">
+        <div class="opacity-60 hidden lg:flex w-[632px] p-20 gap-8 bg-[#1A1A1A] flex-col relative">
           <div class="absolute left-8 top-4 text-[123px] leading-[130%] tracking-[-0.02em] text-white opacity-[22%]">“
           </div>
 
@@ -815,7 +860,7 @@
           </div>
         </div>
 
-        <div class="w-[632px] p-20 gap-8 bg-[#1A1A1A] flex flex-col relative">
+        <div class="flex w-full lg:w-[632px] p-20 gap-8 bg-[#1A1A1A]  flex-col relative">
           <div class="absolute left-8 top-4 text-[123px] leading-[130%] tracking-[-0.02em] text-white opacity-[22%]">“
           </div>
 
@@ -859,7 +904,7 @@
           </div>
         </div>
 
-        <div class="opacity-60 w-[632px] p-20 gap-8 bg-[#1A1A1A] flex flex-col relative">
+        <div class="opacity-60 hidden lg:flex w-[632px] p-20 gap-8 bg-[#1A1A1A]  flex-col relative">
           <div class="absolute left-8 top-4 text-[123px] leading-[130%] tracking-[-0.02em] text-white opacity-[22%]">“
           </div>
 
@@ -907,23 +952,23 @@
   </section>
 
   <!-- Reservation Form -->
-  <section class="p-8 md:p-16 lg:p-30 flex justify-center items-center relative overflow-hidden">
-    <div class="absolute h-px w-1/2 -left-28 top-24 bg-white opacity-50"></div>
-    <div class="absolute h-px w-1/2 -right-28 top-[315px] bg-white opacity-50"></div>
+  <section class="p-8 md:p-16 lg:p-30 flex justify-center items-center relative">
+    <div class="hidden lg:block absolute h-px w-1/2 -left-28 top-24 bg-white opacity-50"></div>
+    <div class="hidden lg:block absolute h-px w-1/2 -right-28 top-[315px] bg-white opacity-50"></div>
 
     <div class="absolute -z-10 top-[330px] left-0 right-0 h-[913px] w-full menu-list-gradient opacity-60">
     </div>
 
-    <div class="flex flex-col gap-16 h-[1066px]">
+    <div class="flex flex-col gap-16 lg:h-[1066px]">
       <div class="flex flex-col justify-center items-center py-8 gap-4 uppercase text-center">
-        <span class="text-[18px] tracking-[0.04em] text-sushi-red">Contact Us</span>
-        <h4 class="text-white text-7xl font-kai tracking-[-0.04em] leading-[88%]">
+        <span class="text-base md:text-[18px] tracking-[0.04em] text-sushi-red">Contact Us</span>
+        <h4 class="text-white text-5xl md:text-6xl lg:text-7xl font-kai tracking-[-0.04em] leading-[88%]">
           Reserve Now
         </h4>
       </div>
 
-      <div class="h-[705px] grid grid-cols-2 gap-0">
-        <div class="bg-[#1A1A1A] w-[600px] p-20 flex flex-col gap-12">
+      <div class="lg:h-[705px] grid grid-cols-1 lg:grid-cols-2 gap-0">
+        <div class="bg-[#1A1A1A] w-full p-20 flex flex-col gap-12">
           <h4 class="text-[35px] text-white tracking-[-0.02em] leading-[130%]">Contact Us</h4>
 
           <div class="flex flex-col">
@@ -961,7 +1006,7 @@
             </div>
           </div>
         </div>
-        <div class="bg-black w-[600px] p-20 flex flex-col gap-8 justify-end ">
+        <div class="bg-black w-full p-20 flex flex-col gap-8 justify-end">
           <h4 class="text-[35px] text-white tracking-[-0.02em] leading-[130%]">Reserve Now</h4>
 
           <div class="flex flex-col">
@@ -1004,7 +1049,7 @@
     </div>
   </section>
 
-  <footer class="h-[220px] bg-[#1A1A1A] px-20 flex flex-row justify-between items-center">
+  <footer class="h-auto lg:h-[220px] bg-[#1A1A1A] py-10 lg:py-0 px-20 flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-0">
     <div class="flex flex-row gap-5">
       <svg class="w-[95px] h-[62px]" viewBox="0 0 71 46" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -1046,7 +1091,22 @@
         </li>
       </ul>
     </div>
-    <ul class="hidden lg:flex flex-wrap content-center flex-row gap-8 uppercase font-medium tracking-[0.08em] text-white text-center">
+
+    <ul
+        class="lg:hidden flex flex-wrap flex-row content-center gap-10 uppercase font-medium tracking-[0.08em] text-center text-white">
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Menu</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+    </ul>
+
+    <ul
+      class="flex flex-wrap content-center flex-row gap-8 uppercase font-medium tracking-[0.08em] text-white text-center">
       <li>
         <a href="#">+23 344 434</a>
       </li>
